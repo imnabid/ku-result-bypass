@@ -6,9 +6,9 @@ import time
 URL = 'http://101.251.6.66/index.php'
 COOKIE_CODE = '3lalhal8bdc2q8kejhl0iauph3'
 CAPTCHA = '74978'
-REGISTRATION_NUMBER = '028248-20'
-START_DATE = '1999-05-12'
-END_DATE = '2003-06-12'
+REGISTRATION_NUMBER = 'Enter Registration Number Here'
+START_DATE = '1999-05-12' #approx start_date
+END_DATE = '2003-06-12' #approx end_date
 EXAM_TYPE='Regular'
 EXAM_YEAR ='2022'
 SEMESTER_YEAR = 'I'
