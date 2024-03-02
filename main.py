@@ -1,27 +1,31 @@
 import aiohttp
 import asyncio
-import pandas as pd
 import time
+import utils
+import requests
+import pandas as pd
 
 URL = 'http://101.251.6.66/index.php'
-COOKIE_CODE = '3lalhal8bdc2q8kejhl0iauph3'
-CAPTCHA = '74978'
-REGISTRATION_NUMBER = 'Enter Registration Number Here'
+REGISTRATION_NUMBER = 'ENTER REGISTRATION NUM HERE'
 START_DATE = '1999-05-12' #approx start_date
 END_DATE = '2003-06-12' #approx end_date
 EXAM_TYPE='Regular'
 EXAM_YEAR ='2022'
 SEMESTER_YEAR = 'I'
 SEMESTER_PART = 'II'
-HEADERS = {
-    'Cookie': f'PHPSESSID={COOKIE_CODE}',
-    'Content-Type': 'application/x-www-form-urlencoded'
-}
+
 
 DATES = pd.date_range(start=START_DATE, end=END_DATE)
 start_time = time.time()
 
 async def main():
+    COOKIE_CODE, CAPTCHA = utils.get_captcha_and_sessid()
+    print('Wait for few seconds!!')
+    HEADERS = {
+    'Cookie': f'PHPSESSID={COOKIE_CODE}',
+    'Content-Type': 'application/x-www-form-urlencoded'
+    }
+
     async with aiohttp.ClientSession() as session:
         for date in DATES:
             payload = {
@@ -43,6 +47,6 @@ async def main():
                         f.write(res)
                         print('result acquired successfully')
                         return
-        print('session expired!! you have to update the cookie code and captcha')
+        print('No result found!')
 asyncio.run(main())
 print("--- %s seconds ---" % (time.time() - start_time))
