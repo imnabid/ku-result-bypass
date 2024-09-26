@@ -13,7 +13,7 @@ This project bypasses CAPTCHA recognition on a university result portal by using
 
 - pip install -r requirements.txt
 
-- KU result page http://101.251.6.66/index.php
+- KU result page: http://101.251.6.66/index.php
 
 - Place the registration number and other requirements
 
