@@ -1,4 +1,5 @@
-##To get started:
+## NOT WORKING!! KU CHANGED THE RESULT PORTAL
+## To get started:
 -pip install -r requirements.txt
 
 
