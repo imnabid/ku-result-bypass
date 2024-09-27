@@ -1,7 +1,9 @@
-## NOT WORKING!! KU CHANGED THE RESULT PORTAL
+### NOT WORKING!! KU CHANGED THE RESULT PORTAL
 ## University Result Portal CAPTCHA Bypass
 
 This project bypasses CAPTCHA recognition on a university result portal by using an automated CAPTCHA recognition technique. It scrapes results by simulating user inputs (like registration number and date of birth) and handles CAPTCHA generation using Optical Character Recognition (OCR).
+
+##### NOTE: Try ```manual-captcha``` branch for manually adding captcha one-time per session.
 
 ## Features
 
